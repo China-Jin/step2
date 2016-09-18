@@ -1,0 +1,32 @@
+/**
+ *重写了部分bootstrap中的样式,所以导入时要放在bootstrap文件后!!
+ */
+/*左侧导航条*/
+@media (min-width: 992px){
+    .col-md-2{
+        width: 10%;
+        max-width: 150px;
+        min-width: 120px;
+    }
+}
+/*右侧内容大小 开始位置*/
+@media (min-width: 992px){
+    .col-md-offset-2 {
+        margin-left: 10%;
+        min-margin-left: 120px;
+    }
+}
+/*右侧内容占剩下部分百分比*/
+@media (min-width: 992px){
+    .col-md-10 {
+        width: 90%;
+    }
+}
+.body-background{
+    background-color: #e0d7c9;
+}
+
+
+
+
+

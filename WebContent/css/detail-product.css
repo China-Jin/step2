@@ -1,0 +1,35 @@
+/*输入框的大小*/
+.input{
+    width: 300px;
+    margin-right: 20px;
+}
+/*详情输入框*/
+.input-detail{
+    width: 500px;
+}
+/*输入提示*/
+.label-tip{
+    margin-right: 20px;
+    height: auto;
+    display: block;
+    float: left;
+    font-size: larger;
+}
+.div-detail{
+    margin: 10px 20px 10px 20px;
+}
+.text-area{
+    maxlength: 10;
+    cols : 100;
+}
+.btn-upLoadImage{
+    display: inline;
+}
+#div-rich-text-editor{
+    overflow:scroll;
+    max-height:300px;
+}
+.select{
+    margin-right: 20px;
+    min-width: 100px;
+}

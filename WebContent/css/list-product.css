@@ -1,0 +1,13 @@
+/*使表单变得紧凑*/
+.table-condensed>tbody>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tfoot>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>thead>tr>td,.table-condensed>thead>tr>th
+{
+    padding: 5px
+}
+/*表单悬停颜色*/
+.table-hover>tbody>tr:hover{
+    background-color:#CFCFCF
+}
+/*选中行的颜色*/
+table.dataTable tbody tr.selected{
+    background-color: #c8bfb2
+}

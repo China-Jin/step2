@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>京东-注册</title>
+<link type="text/css" rel="stylesheet" href="../css2/reg.css" />
+<link type="text/css" rel="stylesheet" href="../css2/forelogin.css" />
+<style type="text/css">
+a:link { text-decoration: none; }
+a:active { text-decoration:blink;}
+a:hover { text-decoration:underline;}
+a:visited { text-decoration: none;color: #000}　
+body,td,th {
+	color: #000;
+}
+</style>
+<script src="../js/reg.js" type="text/javascript"></script>
+<script src="../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var t=60;
+//给邮箱发送验证码
+/*$(document).ready(
+function() {
+$("#button").click(
+   function (){
+   alert("456");
+   var code='<%=code%>'; 
+   alert(code);
+   var  txtemail= $("#text_reg_mailbox").val();
+   alert(txtemail); 
+   $.ajax({
+		type:"POST",
+		contentType:"application/json; charset=utf-8",
+		url:"advisory.aspx/Send",
+		data:"{from:'12345678@qq.com',to:"+txtemail+",cc:'{}',body:"+code+",subject:'邮件标题',mailServer:'smtp.qq.com',port:'25',user:'12345678',password:'123456'}",  
+		dataType:'json',
+		success:function(data) {
+		   if(data==1)
+		  {
+			  alert("发送成功"); 
+			}   
+		  },
+		error: function()
+			{
+			alert("发生错误"); 
+		   }
+			 
+	   });
+	return false;            
+});
+});*/
+</script>
+</head>
+<body>
+<div class="updiv">
+    <div id="div_up_logo">
+           <img src="../images/logo.png" alt="京东" width="170" height="50">
+           <h2 class="hydl" style="display:inline">欢迎注册</h2>
+           <div class="have-account" style="font-size:20px;"><strong>已有账号</strong> <a href="forelogin.html" style="color:#00F"><strong>请登录</strong></a></div>
+    </div>
+</div>
+<div class="central-container">
+  <div class="reg">
+  <form>
+    <p><strong>&nbsp;&nbsp;&nbsp;用&nbsp;户 &nbsp;名:</strong>
+      <input type="text" id="text_reg_name" name="regName" style="height:30px;" maxlength="20" size="30"
+     placeholder="您的账户名和登录名" onfocus="spanName('span_reg_name')" onBlur="clearName('span_reg_name',this)"/><br/>
+      <span id="span_reg_name" name="regspanName" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+      <p><strong>&nbsp;&nbsp;&nbsp;设置密码:</strong>
+      <input type="password" id="text_reg_password" name="regPassword" style="height:30px;" maxlength="20" size="30"
+     placeholder="建议至少使用两种字符组合" onfocus="spanPassword('span_reg_password')" onBlur="clearPassword('span_reg_password',this)"/><br/>
+      <span id="span_reg_password" name="regspanPassword" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+       <p><strong>&nbsp;&nbsp;&nbsp;确认密码:</strong>
+      <input type="password" id="text_reg_password2" name="regPassword2" style="height:30px;" maxlength="20" size="30"
+     placeholder="请再次输入密码"  onfocus="spanPassword2('span_reg_password2')" onBlur="clearPassword2('span_reg_password2',regPassword,this)"/><br/>
+      <span id="span_reg_password2" name="regspanPassword2" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+       <p><strong>&nbsp;&nbsp;&nbsp;邮箱验证:</strong>
+      <input type="text" id="text_reg_mailbox" name="regMailbox" style="height:30px;" maxlength="20" size="30"
+     placeholder="建议使用常用邮箱" onfocus="spanMailbox('span_reg_mailbox')" onBlur="clearMailbox('span_reg_mailbox',this)"/><br/>
+      <span  id="span_reg_mailbox" name="regspanMailbox" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+      <p><strong>&nbsp;&nbsp;&nbsp;验 &nbsp;证 &nbsp;码:</strong>
+      <input type="text" id="text_reg_mailboxword" name="regMailboxword" style="height:30px;" maxlength="20" size="15"
+     placeholder="请输入邮箱验证码" onBlur="clearMailboxword(this)" />
+     <input type="button" name="button" id="button" value="获取验证码" style="width:90px; height:35px;" onClick="clock(this);Verification1(regMailbox)">     
+     <span id="span_mailword" name="spanMailword" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+     <p></p>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox"  id="checkbox1" />我已阅读并同意<a href="useragreement.html"    target="_blank" style="color:#F00">《京东用户注册协议》</a>
+      <span id="span_checkbox" name="spanCheckbox" style="display:block; font-size:14px; margin-left: 20px;color:#0F0; padding-top:5px;"></span></p>
+      <p><input  name="regButton" type="button" id="button_reg" value="立即注册" style="margin-left: 55px; width:250px; height:50px; font-size:20px; background-color:#F00" onClick="regButton1(regName,regPassword,regPassword2,regMailbox,regMailboxword,checkbox)"/></p>  
+  </form>
+  </div>
+</div> 
+<div id="div_bottom_explain">
+        <div class="bottom">
+            <a rel="nofollow" target="_blank" href="https://www.jd.com/intro/about.aspx">
+                关于我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="https://www.jd.com/contact/">
+                联系我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="https://zhaopin.jd.com/JD/web/index">
+                人才招聘
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="http://sale.jd.com/act/wQTpIm7GnXE.html">
+                商家入驻
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="http://sale.jd.com/act/y3surX7qpM.html">
+                广告服务
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="https://app.jd.com/">
+                手机京东
+            </a>
+            |
+            <a target="_blank" href="http://www.jd.com/">
+                友情链接
+            </a>
+            |
+            <a target="_blank" href="https://media.jd.com/">
+                销售联盟
+            </a>
+            |
+            <a href="http://sale.jd.com/act/n0hAvqy5CW8.html" target="_blank">
+                京东社区
+            </a>
+            |
+            <a href="https://gongyi.jd.com/" target="_blank">
+                京东公益
+            </a>
+            |
+            <a target="_blank" href="http://www.joybuy.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+        </div>
+        <div style="padding-left: 450px;">
+            Copyright&nbsp;&copy;&nbsp;2004-2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+        </div>
+    </div>
+</body>
+</html>
