@@ -63,7 +63,8 @@ $(document).ready( function () {
   } );
   /*每行的编辑按钮*/
   $('#order_table tbody').on( 'click', "button[name='edit']", function () {
-	  alert("这是编辑按钮");
+	  var orderID = t.cell( $(this).parents('tr'),1).data();
+	  window.location ="../jsp/editProduct.jsp?orderID="+orderID;
   } );
   
   /*选中行*/
