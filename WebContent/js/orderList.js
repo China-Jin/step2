@@ -10,7 +10,8 @@ $(document).ready( function () {
       /*给最后一列添加按钮*/
       "targets": -1,
       "data": null,
-      "defaultContent": "<button class=\"btn btn-sm\"><i class=\"icon-remove\"></i> 删除</button>",
+      "defaultContent": "<button name='del' class=\"btn btn-sm\"><i class=\"icon-remove\"></i> 删除</button><br/>" +
+      		"<button name='edit' class=\"btn btn-sm\"><i class='icon-cog'></i>编辑</button><br/>",
       "width" : "100",
       "searchable": false,
       "orderable": false
@@ -57,9 +58,14 @@ $(document).ready( function () {
       });
     }).draw();
   /*每行的删除按键*/
-  $('#order_table tbody').on( 'click', 'button', function () {
+  $('#order_table tbody').on( 'click', "button[name='del']", function () {
     t.row($(this).parents('tr')).remove().draw( false );
   } );
+  /*每行的编辑按钮*/
+  $('#order_table tbody').on( 'click', "button[name='edit']", function () {
+	  alert("这是编辑按钮");
+  } );
+  
   /*选中行*/
   $('#order_table tbody').on( 'click', 'tr', function () {
     $(this).toggleClass('selected');
