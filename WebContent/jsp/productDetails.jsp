@@ -40,21 +40,37 @@
 					<form id="form_product_details">
 						<div class="div-detail">
 							<span class="label-tip">商品名称</span>
-							<input type="text" class="input input-detail" id="input_product_name" placeholder="名称字数限制???">
+							<input type="text" class="input input-detail" id="input_product_name" placeholder="">
 						</div>
 						<div class="div-detail">
 							<span class="label-tip">手机品牌</span>
-							<select class="select" form="form_product_details" id="select_1">
-								<option value="华为" onclick="selectOption()">华为</option>
-								<option value="三星" onclick="selectOption()">三星</option>
-								<option value="魅族" onclick="selectOption()">魅族</option>
-								<option value="小米" onclick="selectOption()">小米</option>
-								<option value="HTC" onclick="selectOption()">HTC</option>
+							<select class="select" id="select_1">
+								<option value="华为">华为</option>
+								<option value="三星">三星</option>
+								<option value="魅族">魅族</option>
+								<option value="小米">小米</option>
+								<option value="HTC">HTC</option>
+							</select>
+							<select class="select" id="select_2">
+								<option value="P9系列">P9系列</option>
+								<option value="Mate 8系列">Mate 8系列</option>
+							</select>
+							<select class="select" id="select_3">
+								<option value="EVA-AL00/标准版/全网通">EVA-AL00/标准版/全网通</option>
+								<option value="EVA-AL10/高配版/全网通">EVA-AL10/高配版/全网通</option>
 							</select>
 						</div>
 						<div class="div-detail">
 							<span class="label-tip">商品价格</span>
-							<input type="text" class="input input-detail" id="input_product_price" placeholder="价格范围???">
+							<input type="text" class="input input-detail" id="input_product_price" >
+						</div>
+						<div class="div-detail">
+							<span class="label-tip">商品数量</span>
+							<input type="text" class="input input-detail" id="input_product_number" >
+						</div>
+						<div class="div-detail">
+							<span class="label-tip">商品标签</span>
+							<input type="text" class="input input-detail" id="input_product_number" >
 						</div>
 						<div class="div-detail">
 							<span class="label-tip">商品描述</span>
@@ -98,5 +114,90 @@
 <script src="../js/ueditor.all.js"></script>
 <!-- 当前页面的js-->
 <script src="../js/productDetails.js"></script>
+<script type="text/javascript">
+
+$("#select_1").on("change",function(){
+	if($(this).val() == "华为"){
+		$("#select_2").find("option").remove();
+		$("#select_2").append("<option value='P9系列'>P9系列</option>");
+		$("#select_2").append("<option value='Mate 8系列'>Mate 8系列 </option>");
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='EVA-AL00/标准版/全网通'>EVA-AL00/标准版/全网通</option>");
+		$("#select_3").append("<option value='EVA-AL10/高配版/全网通'>EVA-AL10/高配版/全网通</option>");
+	}
+	else if($(this).val()=="三星"){
+		$("#select_2").find("option").remove();
+		$("#select_2").append("<option value='GALAXY Note 7系列'>GALAXY Note 7系列</option>");
+		$("#select_2").append("<option value='GALAXY S7系列'>GALAXY S7系列</option>");
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='三星1'>三星1</option>");
+		$("#select_3").append("<option value='三星2'>三星2</option>");
+	}else if($(this).val()=="魅族"){
+		$("#select_2").find("option").remove();
+		$("#select_2").append("<option value='魅族1'>魅族1</option>");
+		$("#select_2").append("<option value='魅族2'>魅族2</option>");
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='魅族11'>魅族11</option>");
+		$("#select_3").append("<option value='魅族12'>魅族12</option>");
+	}else if($(this).val()=="小米"){
+		$("#select_2").find("option").remove();
+		$("#select_2").append("<option value='小米1'>小米1</option>");
+		$("#select_2").append("<option value='小米2'>小米2</option>");
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='小米11'>小米11</option>");
+		$("#select_3").append("<option value='小米12'>小米12</option>");
+	}else if($(this).val()=="HTC"){
+		$("#select_2").find("option").remove();
+		$("#select_2").append("<option value='HTC1'>HTC1</option>");
+		$("#select_2").append("<option value='HTC2'>HTC2</option>");
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='HTC11'>HTC11</option>");
+		$("#select_3").append("<option value='HTC12'>HTC12</option>");
+	}		
+})
+$("#select_2").on("change",function(){
+	if($(this).val()=="P9系列"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='EVA-AL00/标准版/全网通'>EVA-AL00/标准版/全网通</option>");
+		$("#select_3").append("<option value='EVA-AL10/高配版/全网通'>EVA-AL10/高配版/全网通</option>");
+	}else if($(this).val()=="Mate 8系列"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='NXT-AL10/3GB RAM/全网通'>NXT-AL10/3GB RAM/全网通</option>");
+		$("#select_3").append("<option value='NXT-AL10/4GB RAM/全网通'>NXT-AL10/4GB RAM/全网通</option>");
+	}else if($(this).val()=="GALAXY Note 7系列"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='三星1'>三星1</option>");
+		$("#select_3").append("<option value='三星2'>三星2</option>");
+	}else if($(this).val()=="GALAXY S7系列"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='三星3'>三星3</option>");
+		$("#select_3").append("<option value='三星4'>三星4</option>");
+	}else if($(this).val()=="魅族1"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='魅族11'>魅族12</option>");
+		$("#select_3").append("<option value='魅族12'>魅族12</option>");
+	}else if($(this).val()=="魅族2"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='魅族21'>魅族21</option>");
+		$("#select_3").append("<option value='魅族22'>魅族22</option>");
+	}else if($(this).val()=="小米1"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='小米11'>小米11</option>");
+		$("#select_3").append("<option value='小米12'>小米12</option>");
+	}else if($(this).val()=="小米2"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='小米21'>小米21</option>");
+		$("#select_3").append("<option value='小米22'>小米22</option>");
+	}else if($(this).val()=="HTC1"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='HTC11'>HTC11</option>");
+		$("#select_3").append("<option value='HTC12'>HTC12</option>");
+	}else if($(this).val()=="HTC2"){
+		$("#select_3").find("option").remove();
+		$("#select_3").append("<option value='HTC21'>HTC21</option>");
+		$("#select_3").append("<option value='HTC22'>HTC22</option>");
+	}
+})
+</script>
 </body>
 </html>

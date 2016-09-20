@@ -50,7 +50,7 @@
         <ul class="list-unstyled">
           <h2 class="title">部分销售进度进度</h2>
           <li>
-            <span class="span-progress">"食物"</span>
+            <span class="span-progress">HTC one</span>
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 40%">
                 40%
@@ -59,7 +59,7 @@
           </li>
           <li class="divider"></li>
           <li>
-            <span class="span-progress">"衣服"</span>
+            <span class="span-progress">红米pro</span>
             <div class="progress">
               <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 20%">
                 20%
@@ -68,7 +68,7 @@
           </li>
           <li class="divider"></li>
           <li>
-            <span class="span-progress">"电子"</span>
+            <span class="span-progress">华为P9</span>
             <div class="progress">
               <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 60%">
                 60%
@@ -77,7 +77,7 @@
           </li>
           <li class="divider"></li>
           <li>
-            <span class="span-progress">"其他"</span>
+            <span class="span-progress">其他</span>
             <div class="progress">
               <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 80%">
                 80% Complete (danger)

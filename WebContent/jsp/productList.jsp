@@ -46,6 +46,7 @@
 						<th>商品价格</th>
 						<th>商品详情</th>
 						<th>创建时间</th>
+						<th class="col-sm-1">剩余数量</th>
 						<th>操作</th>
 					</tr>
 					</thead>

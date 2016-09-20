@@ -39,103 +39,111 @@ input:focus {
 <body>
 <%@ include file="navbar-left.jsp" %>
 <%@ include file="navbar-top.jsp" %>
-<div class="container-fluid">
-	<div class="row">
-		<!--文本主题 左侧col-md-offset-2 -> 10宽度col-md-10 -> 90-->
-		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">商品详情</h1>
-			<div class="panel panel-default">
-				<div class="panel-heading">商品属性</div>
-				<div class="panel-body">
-					<table class="table table-hover">
-				      <thead>
-				        <tr>
-				          <th>订单编号</th>
-				          <th>订单时间</th>
-				          <th>配送时间</th>
-				          <th>订单内容</th>
-				          <th>商品价格</th>
-				        </tr>
-				      </thead>
-				      <tbody>
-				        <tr>
-				          <td><%=request.getParameter("orderID") %></td>
-				          <td><input type="date" value="2016-09-01"/> </td>
-				          <td><input type="text" value="全天都行"/></td>
-				          <td><input type="text" value="htc One"/></td>
-				          <td><input type="text" value="￥2599.00"/></td>				         		   
-				        </tr>
-				        <tr>
-				          <td><%=request.getParameter("orderID") %></td>
-				          <td><input type="date" value="2016-09-01"/> </td>
-				          <td><input type="text" value="全天都行"/></td>
-				          <td><input type="text" value="华为P9"/></td>
-				          <td><input type="text" value="￥3599.00"/></td>	
-				        </tr>
-				        <tr>
-				          <td><%=request.getParameter("orderID") %></td>
-				          <td><input type="date" value="2016-09-01"/> </td>
-				          <td><input type="text" value="全天都行"/></td>
-				          <td><input type="text" value="红米pro手机"/></td>
-				          <td><input type="text" value="￥1500.00"/></td>		
-				        </tr>
-				      </tbody>
-				    </table>
-				    <table class="table table-hover">
-				      <thead>
-				      	<tr>				    
-				     	  <th>商品数量</th>
-				          <th>收货人</th>
-				          <th>收货地址</th>
-				          <th>收货电话</th>
-				          <th>商品当前状态</th>
-				        </tr>
-				       </thead>
-				       <tbody>
-				        <tr>
-				          <td><input type="text" value="1"/></td>
-				          <td><input type="text" value="江南皮革厂"/></td>
-				          <td><input type="text" value="浙江温州"/></td>
-				          <td><input type="text" value="10086"/></td>
-				          <td>
-								<input type="radio" class="btn btn-default btn-xs" name="1" checked="checked">未发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="1">已发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="1">已送达</button>
-						  </td>						        
-				        </tr>
-				         <tr>
-				          <td><input type="text" value="1"/></td>
-				          <td><input type="text" value="江南皮革厂"/></td>
-				          <td><input type="text" value="浙江温州"/></td>
-				          <td><input type="text" value="10086"/></td>
-				          <td>
-								<input type="radio" class="btn btn-default btn-xs" name="2" checked="checked">未发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="2">已发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="2">已送达</button>
-						  </td>						        
-				        </tr>
-				         <tr>
-				          <td><input type="text" value="1"/></td>
-				          <td><input type="text" value="江南皮革厂"/></td>
-				          <td><input type="text" value="浙江温州"/></td>
-				          <td><input type="text" value="10086"/></td>
-				          <td>
-								<input type="radio" class="btn btn-default btn-xs" name="3" checked="checked">未发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="3">已发货</button>
-								<input type="radio" class="btn btn-default btn-xs" name="3">已送达</button>
-						  </td>						        
-				        </tr>
-				       </tbody>
-					</table>
-						<div class="div-detail">
-							<button class="btn" id="btn_product_update" type="submit"><i class=" icon-upload-alt"></i> 提交</button>
+<form>
+	<div class="container-fluid">
+		<div class="row">
+			<!--文本主题 左侧col-md-offset-2 -> 10宽度col-md-10 -> 90-->
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">订单编号:201609010001</h1>
+				<div class="panel panel-default">
+					<div class="panel-heading col-md-8"> 
+					<h4><strong>收货信息</strong></h4>
+						<p>
+	               		  	 姓  名：测试人员<br>
+	                  		 收货地址：江南皮革厂<br>
+	                		 联系电话：10086<br>
+	                </p>
+					</div>
+					<div class="panel-heading col-md-4" > 
+					<h4><strong>订单信息</strong></h4>
+						<p >
+	             		     订单状态：已付款<br>
+	            		     订单时间：2016-07-22 21:33:58<br>
+	            		     快递单号:(速达快递)201609011001<br/> 
+	               	   </p>
+					</div>
+					<div class="panel-body">
+						<table class="table table-hover table-bordered">
+					      <thead>
+					        <tr>
+					          <th>物品编号</th>
+					          <th>订单时间</th>
+					          <th>配送时间</th>
+					          <th>订单内容</th>
+					          <th>商品价格</th>
+					          <th>商品数量</th>
+					          <th>总价</th>
+					          <th>商品当前状态</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+					        <tr>
+					          <td>1</td>
+					          <td><label>2016-09-01 </label> </td>
+					          <td><label>全天都行</label></td>
+					          <td><label>htc One</label></td>
+					          <td><label>￥2599.00</label></td>	
+					          <td><label>1</label></td>
+					          <td><label>￥2599.00</label></td>	
+					          <td>
+									<input type="radio" class="btn btn-default btn-xs" name="2" checked="checked">未发货
+									<input type="radio" class="btn btn-default btn-xs" name="2">已发货
+									<input type="radio" class="btn btn-default btn-xs" name="2">已送达
+							  </td>				         		   
+					        </tr>
+					        <tr>
+					          <td>2</td>
+					          <td><label>2016-09-01 </label> </td>
+					          <td><label>全天都行</label></td>
+					          <td><label>华为P9</label></td>
+					          <td><label>￥3599.00</label></td>
+					          <td><label>1</label></td>
+					          <td><label>￥3599.00</label></td>
+					          <td>
+									
+							  </td>				
+					        </tr>
+					        <tr>
+					          <td>3</td>
+					          <td><label>2016-09-01 </label> </td>
+					          <td><label>全天都行</label></td>
+					          <td><label>红米pro手机</label></td>
+					          <td><label>￥1500.00</label></td>	
+					          <td><label>1</label></td>
+					          <td><label>￥1500.00</label></td>
+					          <td>							
+							  </td>					
+					        </tr>
+					        <tr>
+	           					 <td colspan="2"  class="text-left">
+	            				  	<p>买家留言</p>
+	          					 </td>
+	            				<td  colspan="6"  class="text-left">
+	              					<p>不要顺丰！</p>
+	            				</td>
+	          				</tr>	
+	          				<tr>
+	          					<td colspan="5" >
+	          					</td>
+	          					<td class="text-left">
+	          						<p>总价</p>
+	          					</td>
+	          					<td class="text-left">
+	          						<p>￥7698</p>
+	          					</td>    
+	          					<td></td>   				
+	          				</tr>			        
+					      </tbody>
+					    </table>
+							<div class="div-detail">
+								<button class="btn" id="btn_product_update" type="submit"><i class=" icon-upload-alt"></i> 提交</button>
+							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
-		</div>
 	</div>
-</div>
+</form>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

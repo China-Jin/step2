@@ -93,41 +93,8 @@ var optionsThree = [
 $(document).ready(function () {
   /*实例化编辑器*/
   var ue = UE.getEditor('container');
-
 })
-function selectOption() {
-  var select_1 = $("#select_1").val();
-  /*判断二级选项是否存在,如果存在则返回*/
-  if($("#select_2").length!=0){
-    $("#select_2").remove();
-  }
-  var mySelect = document.createElement("select");
-  mySelect.id = "select_2";
-  mySelect.setAttribute("class","select");
-  switch (select_1){
-    case "上衣":
-      $("#select_1").after(mySelect);
-      for(var i=0;i<optionsOne.length;i++){
-        addOption("#select_2",optionsOne[i]);
-    }
-      break;
-    case "裤子":
-      $("#select_1").after(mySelect);
-      for(var i=0;i<optionsTwo.length;i++){
-        addOption("#select_2",optionsTwo[i]);
-      }
-    case "裙子":
-      $("#select_1").after(mySelect);
-      for(var i=0;i<optionsThree.length;i++){
-        addOption("#select_2",optionsThree[i]);
-      }
-    default:break;
-  }
-}
-/*添加选项*/
-function addOption(id,text){
-  //根据id查找对象，
-  var obj=$(id);
-  //添加一个选项
-  obj.get(0).options.add(new Option(text,text));
-}
+
+
+
+

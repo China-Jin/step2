@@ -10,7 +10,8 @@ $(document).ready( function () {
       /*给最后一列添加按钮*/
       "targets": -1,
       "data": null,
-      "defaultContent": "<button class=\"btn btn-sm\"><i class=\"icon-remove\"></i> 删除</button>",
+      "defaultContent": "<button name='delPro' class=\"btn btn-sm\"><i class=\"icon-remove\"></i>删除</button>"+
+      					"<button name='editPro' class=\"btn btn-sm\"><i class='icon-cog'></i>编辑</button>",
       "width" : "100",
       "searchable": false,
       "orderable": false
@@ -57,10 +58,13 @@ $(document).ready( function () {
       });
     }).draw();
   /*每行的删除按键*/
-  $('#product_table tbody').on( 'click', 'button', function () {
-    t.row($(this).parents('tr')).remove().draw( false );
-
-  } );
+  $('#product_table tbody').on( 'click', "button[name='delPro']", function () {
+	    t.row($(this).parents('tr')).remove().draw( false );
+	  } );
+  /*每行的编辑按键*/
+  $('#product_table tbody').on( 'click', "button[name='editPro']", function () {
+	  window.location ="../jsp/productDetails.jsp";
+	  } );
   /*选中行*/
   $('#product_table tbody').on( 'click', 'tr', function () {
     $(this).toggleClass('selected');

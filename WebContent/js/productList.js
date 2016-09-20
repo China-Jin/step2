@@ -10,7 +10,8 @@ $(document).ready( function () {
       /*给最后一列添加按钮*/
       "targets": -1,
       "data": null,
-      "defaultContent": "<button class=\"btn btn-sm\"><i class=\"icon-remove\"></i> 删除</button>",
+      "defaultContent": "<button name='del' class=\"btn btn-sm\"><i class=\"icon-remove\"></i> 删除12</button><br/>"+
+		"<button name='editPro' class=\"btn btn-sm\"><i class='icon-cog'></i>编辑</button><br/>",		
       "width" : "100",
       "searchable": false,
       "orderable": false
