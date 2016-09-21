@@ -55,15 +55,14 @@ body {
 </head>
  <body>
     <div class="container well">
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="index.jsp">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="用户名" required autofocus>
+        <input type="text" class="form-control" placeholder="用户名" required autofocus>
         <input type="password" class="form-control" placeholder="密码" required>
         <div class="checkbox">
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
     </div> <!-- /container -->
   </body>
 </html>

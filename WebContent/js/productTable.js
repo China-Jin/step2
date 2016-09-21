@@ -11,7 +11,8 @@ $(document).ready( function () {
       "targets": -1,
       "data": null,
       "defaultContent": "<button name='delPro' class=\"btn btn-sm\"><i class=\"icon-remove\"></i>删除</button>"+
-      					"<button name='editPro' class=\"btn btn-sm\"><i class='icon-cog'></i>编辑</button>",
+      					"<button name='editPro' class=\"btn btn-sm\"><i class='icon-cog'></i>编辑</button>"+
+      					"<button name='seeCommon' class=\"btn btn-sm\"><i class='icon-cog'></i>查看评论</button>",
       "width" : "100",
       "searchable": false,
       "orderable": false
@@ -64,6 +65,10 @@ $(document).ready( function () {
   /*每行的编辑按键*/
   $('#product_table tbody').on( 'click', "button[name='editPro']", function () {
 	  window.location ="../jsp/productDetails.jsp";
+	  } );
+  /*每行的查看评论按钮*/
+  $('#product_table tbody').on( 'click', "button[name='seeCommon']", function () {
+	  window.location ="../jsp/productCommon2.jsp";
 	  } );
   /*选中行*/
   $('#product_table tbody').on( 'click', 'tr', function () {

@@ -39,7 +39,7 @@ input:focus {
 <body>
 <%@ include file="navbar-left.jsp" %>
 <%@ include file="navbar-top.jsp" %>
-<form>
+<form action="orderList.jsp">
 	<div class="container-fluid">
 		<div class="row">
 			<!--文本主题 左侧col-md-offset-2 -> 10宽度col-md-10 -> 90-->

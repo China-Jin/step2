@@ -1,17 +1,17 @@
 /**
  * Created by xiwenlejian on 2016/8/28.
- * 用于导入用户列表的表格
+ * 用于导入评论的表格
  */
 $(document).ready( function () {
-  var t = $('#user_table').DataTable( {
+  var t = $('#common_table').DataTable( {
     /*导入数据*/
-    "ajax": " ../data/array-user.txt",
+    "ajax": " ../data/array-common.txt",
     /*列设置*/
     "columnDefs": [ {
       /*给最后一列添加按钮*/
       "targets": -1,
       "data": null,
-      "defaultContent":"<button class=\"btn btn-sm\"><i class=\"icon-refresh\"></i>编辑</button>",
+      "defaultContent": "<button class=\"btn btn-sm\"><i class=\"icon-remove\"></i>删除</button>",
       "width" : "100",
       "searchable": false,
       "orderable": false
@@ -71,16 +71,8 @@ $(document).ready( function () {
       }*/
     }).draw();
   /*按钮功能*/
-  $("#user_table tbody").on( 'click', 'button', function () {
-   /* var data = t.cell( $(this).parents('tr'),5 ).data();*/
-    /*alert( data[1] +"'s salary is: "+ data[3] );
-    alert(data);*/
-    /*if(data!= "冻结"){
-    	t.cell($(this).parents("tr"),5).data("冻结").draw();}
-    else{
-    	t.cell($(this).parents("tr"),5).data("正常").draw();
-    }*/
-	  window.location ="../jsp/userDetails.jsp";	  	  
+  $("#common_table tbody").on( 'click', 'button', function () {
+    t.row($(this).parents('tr')).remove().draw( false );
   } );
 
 } );
